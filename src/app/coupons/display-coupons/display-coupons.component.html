@@ -47,8 +47,15 @@
       <div>
           @if (paginatedCoupons.length > 0) { 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
-                @for (item of paginatedCoupons; track item.id ) {
+                @for (item of paginatedCoupons; track item.id; let i = $index) {
                     <app-coupon-item [coupon]="item" />
+                    @if (i === 11) {
+                        <!-- Show Ad after the 12th item -->
+                        <div class="col-span-full flex justify-center cursor-pointer">
+                            <img src="jumia_ad_banner.svg" alt="Advertisement" class="w-full" />
+                        </div>
+                    }
+      
                 } 
             </div>
             <app-pagination

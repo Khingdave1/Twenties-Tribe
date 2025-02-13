@@ -33,3 +33,14 @@
   .mdc-slider__thumb-knob {
     background-color: red;
   } */
+
+  mat-slider {
+    --mdc-slider-handle-color: #9444CB;
+    --mdc-slider-handle-height: 20px;
+    --mdc-slider-handle-width: 20px;
+    --mdc-slider-active-track-color: #9444CB;
+    --mdc-slider-inactive-track-color: var(--primary-color-2);
+    --mdc-slider-active-track-height: 3px;
+    --mdc-slider-focus-handle-color: #7c30afcb;
+    --mdc-slider-hover-handle-color: #7c30afcb;
+  }
