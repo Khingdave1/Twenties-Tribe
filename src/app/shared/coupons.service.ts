@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class CouponsService {
 
   private jsonUrl = 'couponDataTest.json';
-  http = inject(HttpClient);
+  
+  private http = inject(HttpClient);
 
   getCoupons(): Observable<any> {
     return this.http.get<any>(this.jsonUrl);

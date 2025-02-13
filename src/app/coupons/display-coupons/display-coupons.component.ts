@@ -28,7 +28,7 @@ export class DisplayCouponsComponent implements OnInit {
   sortBy: 'newest' | 'oldest' = 'newest';
   pageNumber: number = 1;
   pageSize: number = 16;
-  couponsService = inject(CouponsService);
+  private couponsService = inject(CouponsService);
   
   ngOnInit() {
     this.getCoupons();

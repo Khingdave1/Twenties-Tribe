@@ -1,6 +1,6 @@
 <div class="flex items-center gap-2 justify-between">
     <img 
-        [src]="coupon().company_logo ? coupon().company_logo : 'jumia_logo.svg'" 
+        [src]="coupon()?.company_logo ? coupon()?.company_logo : 'jumia_logo.svg'" 
         alt="logo" 
         class="w-[40px] h-[40px]"
     >
@@ -16,14 +16,14 @@
 </div>
 
 <h3 class="mt-2 mb-5 flex items-center gap-2 justify-between font-bold text-[16px] leading-[24.96px]">
-    <span [title]="coupon().company_name">
-        {{ coupon().company_name | truncate:10 }}
+    <span [title]="coupon()?.company_name">
+        {{ coupon()?.company_name | truncate:10 }}
     </span>
-    <span>-{{ coupon().coupon_discount }}%</span>
+    <span>-{{ coupon()?.coupon_discount }}%</span>
 </h3>
 
 <small class="block font-medium text-[12px] tracking-[0.1px] leading-[17.6px] text-[#616161]">
-    {{ coupon().title }}
+    {{ coupon()?.title }}
 </small>
 
 <button class="btn btn-dark-outline mt-6 font-bold !text-[14px] w-full">
