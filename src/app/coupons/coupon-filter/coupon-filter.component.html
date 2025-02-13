@@ -1,0 +1,90 @@
+<form [formGroup]="formGroup">
+    <div class="text-[14px] font-bold form-item">
+        <h3 class="form-title">Category</h3>
+        <div class="px-[8px] grid gap-[8px]">
+            @for (item of categories; track item.value ) {
+                <span class="flex items-center gap-[12px]">
+                    <input 
+                        type="radio"
+                        [id]="'category-' + item.value"
+                        [value]="item.value"
+                        class="form-check-input"
+                        formControlName="category"
+                        (change)="getFilterValues()"
+                    >
+                    <label [for]="'category-' + item.value" class="leading-[14px]">{{ item.label }}</label>
+                </span>
+            }
+        </div>
+    </div>
+    <!-- <div class="text-[14px] font-bold form-item">
+        <h3 class="form-title">Category</h3>
+        <mat-slider
+            [min]="minLimit"
+            [max]="maxLimit"
+            step="1"
+            [displayWith]="formatLabel"
+            (input)="onSliderChange()"
+        >
+            <input matSliderStartThumb formControlName="minValue">
+            <input matSliderEndThumb formControlName="maxValue">
+        </mat-slider>
+    
+        <div class="flex items-center gap-[8px] min-max-display"> 
+            <input 
+                type="number"
+                class="border border-[#BDBDBD] p-4 rounded-[4px] text-center"
+                title="Min"
+                formControlName="minValue"
+                (input)="onMinInputChange()"
+            >
+            <div>-</div>
+            <input 
+                type="number"
+                class="border border-[#BDBDBD] p-4 rounded-[4px] text-center"
+                title="Max"
+                formControlName="maxValue"
+                (input)="onMaxInputChange()"
+            >
+        </div>
+    </div> -->
+    <div class="text-[14px] font-bold form-item">
+        <h3 class="form-title">Percentage</h3>
+        <div class="px-[8px] grid gap-[8px]">
+            @for (item of percentages; track item.value ) {
+                <span class="flex items-center gap-[12px]">
+                    <input 
+                        type="radio"
+                        [id]="'percentage-' + item.value"
+                        [value]="item.value"
+                        class="form-check-input"
+                        formControlName="percentage"
+                        (change)="getFilterValues()"
+                    >
+                    <label [for]="'percentage-' + item.value" class="leading-[14px]">{{ item.label }}</label>
+                </span>
+            }
+        </div>
+    </div>
+    <div class="text-[14px] font-bold form-item">
+        <h3 class="form-title">Location</h3>
+        <div class="px-[8px] grid gap-[8px]">
+            @for (item of locations; track item.value ) {
+                <span class="flex items-center gap-[12px]">
+                    <input 
+                        type="radio"
+                        [id]="'location-' + item.value"
+                        [value]="item.value"
+                        class="form-check-input"
+                        formControlName="location"
+                        (change)="getFilterValues()"
+                    >
+                    <label [for]="'location-' + item.value" class="leading-[14px]">{{ item.label }}</label>
+                </span>
+            }
+        </div>
+    </div>
+</form>
+
+
+  

@@ -1,0 +1,67 @@
+<section class="bg-[#FAFAFA] py-[5rem]">
+  <div class="tr-container  md:flex items-start gap-6">
+    <app-coupon-filter class="md:basis-[20%]" />
+
+    <div class="md:basis-[80%]">
+      <div class="flex items-center gap-2 md:gap-[54px] flex-wrap mb-[24px]">
+        <div
+          class="flex items-center gap-2 border border-[#616161] hover:border-[#E0E0E0] duration-300 rounded-[48px] px-6 sm:basis-full lg:basis-[65%]"
+        >
+          <input
+            type="text"
+            placeholder="Search for store items"
+            class="w-full py-2 border-none outline-none"
+            [(ngModel)]="searchText"
+            (input)="filterAndSortCoupons()"
+          />
+          <img
+            src="search_icon_small.svg"
+            alt="search"
+            class="cursor-pointer"
+          />
+        </div>
+        <div class="text-[18px] sm:basis-full lg:flex-1 flex items-center gap-2">
+          <label for="sort" class="font-bold whitespace-nowrap">Sort By:</label>
+          <div class="relative w-full">
+            <select
+              name="sort"
+              id="sort"
+              class="w-full font-normal border-none outline-none leading-[27.72px] tracking-[0.15px] appearance-none pr-10 pl-[0.5rem]"
+              [(ngModel)]="sortBy"
+              (change)="filterAndSortCoupons()"
+            >
+              <option value="newest">Newest to oldest</option>
+              <option value="oldest">Oldest to newest</option>
+            </select>
+        
+            <!-- Custom Icon -->
+            <img 
+              src="select_drop_icon.svg" 
+              alt="Dropdown Icon"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none w-[24px] h-[24px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+          @if (paginatedCoupons.length > 0) { 
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
+                @for (item of paginatedCoupons; track item.id ) {
+                    <app-coupon-item [coupon]="item" />
+                } 
+            </div>
+            <app-pagination
+                class="mt-[24px] w-full"
+                [pageNumber]="pageNumber"
+                [pageSize]="pageSize"
+                [totalItems]="filteredCoupons.length"
+                (pageChange)="onPageChange($event)"
+            ></app-pagination>
+          } @else {
+              <p class="text-center w-full">No coupon found</p>
+          }
+      </div>
+    </div>
+  </div>
+</section>

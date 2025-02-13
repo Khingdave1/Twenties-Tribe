@@ -1,0 +1,35 @@
+.form-item {
+    padding: 16px;
+}
+
+.form-item:not(:last-child) {
+    border-bottom: 1px solid var(--primary-color-2);
+}
+
+.form-title {
+    color: var(--dark-color-2);
+    line-height: 21.56px;
+    margin-bottom: 12px;
+}
+
+.form-check-input {
+    width: 16px;
+    height: 16px;
+}
+
+.form-check-input[type="checkbox"]:checked,
+.form-check-input[type="radio"]:checked {
+    accent-color: var(--primary-color); 
+}
+
+/* .mdc-slider {
+  } 
+
+.mdc-slider .mdc-slider__track {
+    top: 60%;
+    background: red !important;
+  } 
+
+  .mdc-slider__thumb-knob {
+    background-color: red;
+  } */

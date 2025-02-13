@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #9444CB;
+    --primary-color-2: #E0E0E0;
+    --primary-color-3: #FAF7FD;
+    --orange-color: #EE7037;
+    --dark-color: #1B1C1E;
+    --dark-color-2: #757575;
+    --white-color: #ffffff;
+    --box-shadow: -5px 8px 28px -13px rgba(150, 146, 146, 1);
+    --border-radius: 12px;
+  }

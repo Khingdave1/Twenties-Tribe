@@ -1,0 +1,22 @@
+input,
+input::placeholder {
+    color: #616161;
+}
+
+.card {
+    background-color: var(--primary-color-3);
+    border: 1px solid var(--primary-color-2);
+    border-radius: var(--border-radius);
+    padding: 24px 16px; 
+    width: 100%;
+    display: grid;
+}
+
+.coupon-filters {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+}
+
+select {
+    font-family: "Lato", serif;
+}

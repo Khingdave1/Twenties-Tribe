@@ -1,0 +1,36 @@
+<div class="flex items-center gap-2 justify-between">
+    <img 
+        [src]="coupon().company_logo ? coupon().company_logo : 'jumia_logo.svg'" 
+        alt="logo" 
+        class="w-[40px] h-[40px]"
+    >
+    
+    <span class="flex items-center gap-2 justify-between">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="cursor-pointer">
+            <path d="M1.79003 17.6223C1.52729 17.7274 1.27769 17.7055 1.04122 17.5566C0.804756 17.4077 0.686523 17.1931 0.686523 16.9129L0.686523 11.6581L8.62125 9.6875L0.686523 7.6644L0.686523 2.46213C0.686523 2.18188 0.804756 1.9673 1.04122 1.81842C1.27769 1.66953 1.52729 1.64764 1.79003 1.75273L18.9206 8.95183C19.2359 9.09195 19.3936 9.33718 19.3936 9.6875C19.3936 10.0378 19.2359 10.283 18.9206 10.4232L1.79003 17.6223Z" fill="#9444CB"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="cursor-pointer">
+            <path d="M4.16914 2.66647C4.16922 2.11425 4.61691 1.66663 5.16914 1.66663L15.0714 1.66663C15.6237 1.66663 16.0714 2.11443 16.0714 2.66678L16.0693 16.2186C16.0692 17.063 15.0872 17.5271 14.4347 16.9913L10.7525 13.9676C10.3836 13.6647 9.8521 13.6647 9.48324 13.9676L5.80169 16.9907C5.14901 17.5267 4.16694 17.0623 4.16707 16.2178L4.16914 2.66647Z" stroke="#9444CB"/>
+        </svg>
+    </span>
+</div>
+
+<h3 class="mt-2 mb-5 flex items-center gap-2 justify-between font-bold text-[16px] leading-[24.96px]">
+    <span [title]="coupon().company_name">
+        {{ coupon().company_name | truncate:10 }}
+    </span>
+    <span>-{{ coupon().coupon_discount }}%</span>
+</h3>
+
+<small class="block font-medium text-[12px] tracking-[0.1px] leading-[17.6px] text-[#616161]">
+    {{ coupon().title }}
+</small>
+
+<button class="btn btn-dark-outline mt-6 font-bold !text-[14px] w-full">
+    See Offer
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="icon">
+        <path d="M1.33325 8L14.6666 8" stroke="#1B1C1E" stroke-linecap="round"/>
+        <path d="M14.6666 8L11.3333 11.3333" stroke="#1B1C1E" stroke-linecap="round"/>
+        <path d="M14.6666 7.99996L11.3333 4.66663" stroke="#1B1C1E" stroke-linecap="round"/>
+    </svg>
+</button>

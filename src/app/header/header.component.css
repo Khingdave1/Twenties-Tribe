@@ -1,0 +1,59 @@
+nav ul li a {
+  font-size: 16px;
+  line-height: 24.96px;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.header-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 2rem;
+}
+
+.menu-icon,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1230px) {
+  .header-nav-container,
+  .search,
+  .btn.signup {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    background-color: var(--white-color);
+    width: 80%;
+    height: 100vh;
+    padding: 24px;
+    box-shadow: 0px 8px 24px 0px #081A3D1F;
+    z-index: 900;
+    transition: all 0.5s;
+  }
+
+  .mobile-menu.open {
+    right: 0px;
+  }
+
+  .close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,27 @@
+section {
+    z-index: 1;
+}
+
+section::before {
+    content: url('../../../public/hero_vector_1.svg');
+    left: 0;
+}
+
+section::after {
+    content: url('../../../public/hero_vector_2.svg');
+    right: 0;
+}
+
+section::after,
+section::before {
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 665px) {
+    section::before {
+        display: none;
+    }
+}
