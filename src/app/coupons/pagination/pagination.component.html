@@ -1,9 +1,9 @@
-<div class="flex items-center justify-between gap-3 mt-4">
+<div class="flex items-center justify-between flex-wrap gap-3 mt-4">
   <div class="text-[#616161] text-[14px] leading-[21.56px]">
     {{ startItem }} - {{ endItem }} of {{ totalItems }} items
   </div>
 
-  <div class="flex items-center gap-[20px]">
+  <div class="flex items-center flex-wrap gap-[20px]">
     <button
         [class]="{
             'cursor-pointer': pageNumber !== 1,
