@@ -12,5 +12,5 @@ import { TruncatePipe } from '../../shared/truncate.pipe';
   }
 })
 export class CouponItemComponent {
-  coupon = input.required<any>();
+  coupon = input<any>();
 }
